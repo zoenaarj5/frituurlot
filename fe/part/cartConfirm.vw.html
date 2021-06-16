@@ -1,0 +1,14 @@
+<h2>{{tranz.cartConfirmTitle}}</h2>
+<div id='cart-box'>
+	<div id='cart-conf-top'>
+		<button  ng-click='toShop()' title='{{tranz.goBack}}'><img src="img/rew.png"></button>
+		<button ng-click='sendCart()' title='{{tranz.sendCart}}'><img src="img/send-order.png"></button>
+		<!--button ng-click='printCart()' title='{{tranz.useFax}}'><img src='img/fax-icon.png'></button-->
+	</div>
+	<div id='cart-conf-comment-box'><p>{{tranz.COMMessage}}</p><textarea ng-model='cartComment' placeholder='{{tranz.newOrderMessage}}'></textarea>{{cartComment}}</div>
+	<table>
+		<tr><th>{{tranz.productNameColumn}}</th><th>{{tranz.productPriceColumn}}</th><th>{{tranz.cartQuantity}}</th><th class='PCAndTabletOnly'>{{tranz.productDescriptionColumn}}</th><th>{{tranz.reduxColumn}}</th><th>{{tranz.fullReduxColumn}}</th><th>{{tranz.totalLinePriceColumn}}</th></tr>
+		<tr ng-repeat='ol in orderLines | filter:isValidOrderLine'><td>{{ol.product.s_translation_name}}</td><td>€ {{ol.product.product_price}}</td><td>{{ol.cartQuantity}}</td><td class='PCAndTabletOnly'>{{ol.product.s_translation_description}}</td><td>€ {{ol.redux}}</td><td>€ {{ol.fullRedux}}</td><td>€ {{ol.totalLinePrice}}</td></tr>
+		<tr><td colspan='6'>GRAND TOTAL</td><td>€ {{totalPrice}}</td></tr>
+	</table>
+</div>

@@ -1,0 +1,65 @@
+<head>
+	<meta charset='UTF-8'>
+	<title>Frituur Lot - Administrator</title>
+	
+	<script type="text/javascript" src="../ge/js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="../ge/js/lib/angular-route.min.js"></script>
+
+	<script type="text/javascript" src="../ge/js/jq/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../ge/js/jq/animation.jq.js"></script>
+
+
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-languageFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-mathFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-orderFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-dataTransformerFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-productFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-promotionFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-clientFactory.ng.js"></script>
+	<script type="text/javascript" src="../ge/js/ng/factory/GE-factories.ng.js"></script>
+
+	<script type="text/javascript" src='js/ng/factory/AD-menuFactory.ng.js'></script>
+	<script type="text/javascript" src='js/ng/factory/AD-formVerifierFactory.ng.js'></script>
+	<script type="text/javascript" src='js/ng/factory/AD-viewTranslationFactory.ng.js'></script>
+	<script type="text/javascript" src='js/ng/factory/AD-factories.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-homeController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-menuController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-languageController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-productsController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-promotionsController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-clientsController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-ordersController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-orderDetailsController.ng.js'></script>
+	<script type="text/javascript" src='js/ng/controller/AD-controllers.ng.js'></script>
+	<script type="text/javascript" src='js/ng/AD.ng.js'></script>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/clients.css">
+	<link rel="stylesheet" type="text/css" href="css/orders.css">
+	<link rel="stylesheet" type="text/css" href="css/orderDetails.css">
+	<link rel="stylesheet" type="text/css" href="css/productEdit.css">
+	<link rel="stylesheet" type="text/css" href="css/products.css">
+	<link rel="stylesheet" type="text/css" href="css/promotionEdit.css">
+	<link rel="stylesheet" type="text/css" href="css/promotions.css">
+</head>
+<body ng-app='AD'>
+	<header>
+		<div id='top-menu-toggle-box'>Menu</div>
+		<h2>Header content</h2>
+		<div ng-controller='ADLanguageController'>
+			<ul>
+				<li ng-repeat='lang in languagez'><a href="#" ng-click='setLanguage(lang.code)'>{{lang.code}}</a></li>
+			</ul>
+		</div>
+	</header>
+	<div>Filler</div>
+	<div>
+		<nav id='main-menu' ng-controller='AD-menuController'>
+			<ul>
+				<li ng-repeat='item in menuItemz'><a href="#/{{item.page}}">{{item.text}}</a></li>
+			</ul>
+		</nav>
+		<div id='wrapper' ng-view=''></div>
+	</div>
+</body>

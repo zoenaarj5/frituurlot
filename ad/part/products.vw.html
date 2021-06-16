@@ -1,0 +1,19 @@
+<h2>Products content</h2>
+<div id='products-box' ng-init='init()'>
+	<table>
+		<tr>
+			<th>{{tranz.productId}}</th>
+			<th>{{tranz.productName}}</th>
+			<th>{{tranz.productDescription}}</th>
+			<th>{{tranz.productPrice}}</th>
+			<th>{{tranz.productActive}}</th>
+		</tr>
+		<tr ng-repeat='prod in productz' ng-click='toProductEdit(prod.product_id)'>
+			<td>{{prod.product_id}}</td>
+			<td>{{prod.s_translation_name}}</td>
+			<td>{{prod.s_translation_description}}</td>
+			<td>{{prod.product_price}}</td>
+			<td><img src='../ge/img/yn/active_{{prod.product_active}}.png'></td>
+		</tr>
+	</table>
+</div>

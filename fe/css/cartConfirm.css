@@ -1,0 +1,45 @@
+#cart-box{
+	display:inline-block;
+	width:40%;
+}
+#cart-box table{
+	background-color: rgba(4,1,1,0.8);
+	border: solid 1px #FE8;
+	border-collapse: collapse;
+	font-size:1em;
+	text-align: center;
+	width:100%;
+}
+#cart-box table img{
+	height:2em;
+	width:2.5em;
+}
+#cart-box table th{
+	color:#FC8;
+	font-weight: normal;
+}
+#cart-box table td,#cart-box table th{
+	border:solid 1px #FE8;
+	adding-top:0.5em;
+	adding-bottom:0.5em;
+}#cart-box .reset-button{
+	background-color: orange;
+}#cart-conf-comment-box{
+	text-align: center;
+}#cart-conf-comment-box textarea{
+	background-color: black;
+	color:lightgray;
+	text-align: center;
+	width:90%;
+}#cart-conf-top{
+	height: 3em;
+	text-align: center;
+}
+#cart-conf-top>button{
+	height:100%;
+	width:5em;
+}
+#cart-conf-top>button img{
+	height:2em;
+	width:2em;
+}

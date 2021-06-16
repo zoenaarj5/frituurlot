@@ -1,0 +1,9 @@
+<div id='myOrders-box' ng-init='init()'>
+	<div id='myOrders-button-bar'>
+		<button ng-click='toCardView()'><!--img src="img/rew.png"-->{{tranz.back}}</button>
+	</div>
+	<table>
+		<tr><th>ID</th><th>{{tranz.orderDate}}</th><th class='PCAndTabletOnly'>{{tranz.clientFirmName}}</th><!--th class='PCAndTabletOnly'>{{tranz.clientName}}</th><th class='PCAndTabletOnly'>{{tranz.clientFirstName}}</th--><!--th>{{tranz.orderDelivered}}</th><th>{{tranz.orderPaid}}</th--><th>{{tranz.viewOrder}}</th><th>{{tranz.printOrder}}</th></tr>
+		<tr ng-repeat='order in orderz' ><td>{{order.order_id}}</td><td>{{order.fDate}}, {{order.fTime}}</td><td class='PCAndTabletOnly'>{{order.client_firm_name}}</td><!--td class='PCAndTabletOnly'>{{order.client_contact_name}}</td><td class='PCAndTabletOnly'>{{order.client_contact_first_name}}</td--><!--td><img src='img/active_{{order.order_delivered}}.png'></td><td><img src='img/active_{{order.order_paid}}.png'></td--><td ng-click='toMyOrderDetails(order.order_id)'><img src="img/eye-icon.png"></td><td ng-click='printMyOrder(order.order_id)'><img src="img/fax-icon.png"></td></tr>
+	</table>
+</div>

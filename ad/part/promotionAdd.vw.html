@@ -1,0 +1,18 @@
+<h2>{{tranz.newPromotion}}</h2>
+<div id='promotionAdd-box' ng-init='init(initAdd)'>
+	<div>
+		<button id='promoAddSender' ng-click='sendPromotion()' disabled='disabled'>{{tranz.sendPromo}}</button>
+	</div>
+	<div>
+		<select ng-model='promoTableId'>
+			<option ng-repeat='prod in productz' value='{{prod.product_promotable_id}}'>{{prod.s_translation_name}}</option>
+		</select>{{promoTableId}}
+		<span>{{tranz.newPromoStartDate}}</span>
+		<input id='input-promoStartDate' type='date' ng-model='newPromotion.startDate' ng-change='verifyForm("promoAdd")'>{{newPromotion.startDate}}
+		<span>{{tranz.newPromoEndDate}}</span>
+		<input id='input-promoEndDate' type='date' ng-model='newPromotion.endDate' ng-change='verifyForm("promoAdd")'>{{newPromotion.endDate}}
+		<span>{{tranz.newPromotion.value}}</span><input type='text' ng-model='newPromotion.value' id='input-promoValue' ng-keyup='verifyElement("promoAdd","promoValue")' ng-change='verifyForm("promoAdd")'><select ng-model='newPromotion.type'>
+			<option ng-repeat='pt in promoTypez' value='{{pt.code}}'>{{pt.name}}</option>
+		</select>{{newPromotion.type}}
+	</div>
+</div>

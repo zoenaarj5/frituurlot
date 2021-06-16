@@ -1,0 +1,35 @@
+<h3 style="margin:auto;width:10%;">{{tranz.title}}</h3>
+	<div class="galleryBox" ng-init="init()">
+		<div ng-repeat="pik in galleryPikz" class="galleryImageBox"
+			onclick="let id=this.id.replace('galleryImageBox_','lightBoxGalleryPicBox_'),
+						elt=document.getElementById(id);
+			if(elt!==null){
+				console.log('Found! id = \''+elt.id+'\'');
+				elt.style.display='block';
+				let arz=document.querySelectorAll('.lightBoxArrowImage');
+				for(let ar of arz){
+					ar.style.display='inline-block';
+				}
+				document.getElementById('currentLBImageName').value=id.replace('lightBoxGalleryPicBox_','');
+			}
+			" id="galleryImageBox_{{pik.name}}">
+				<img src="{{'img/gallery/images/'+pik.name+'.'+pik.type}}" alt="{{pik.name}}"  title="{{pik.name}}.{{pik.type}}">
+			</div>
+	</div>
+<div class="lightBoxContainer">
+	<div class="lightBoxGalleryPicBox" ng-repeat="pik in galleryPikz" id="lightBoxGalleryPicBox_{{pik.name}}" ng-click="setVisibleLightBoxActions(false)"
+		onclick="this.style.display='none';
+				let arz=document.querySelectorAll('.lightBoxArrowImage');
+				for(let ar of arz){
+					ar.style.display='none';
+				}
+		" 
+	 >
+	<img src="img/gallery/images/{{pik.name}}.{{pik.type}}"/>
+	</div>
+</div>
+<div class="lightBoxArrowImageContainer">
+	<img class="lightBoxArrowImage" id="lightBoxArrowImageLeft" src="img/gallery/signs/white-triangle-icon-left.png" alt="<" class="lightBoxArrowImage" ng-click='slide(false)'>
+	<img class="lightBoxArrowImage" id="lightBoxArrowImageRight" src="img/gallery/signs/white-triangle-icon-right.png" alt=">" class="lightBoxArrowImage" ng-click='slide(true)'>
+</div>
+<input type="hidden" value="" name="currentLBImageName" id="currentLBImageName"/>

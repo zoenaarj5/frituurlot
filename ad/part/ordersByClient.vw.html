@@ -1,0 +1,17 @@
+<h2>Orders content</h2>
+<div id='ordersByClient-box' ng-init='init(initOrdersByClient)'>
+	<table>
+		<tr>
+			<th>{{tranz.orderId}}</th>
+			<th>{{tranz.orderDate}}</th>
+			<th>{{tranz.orderClientNames}}</th>
+			<th>{{trans.orderClientFirm}}</th>
+		</tr>
+		<tr ng-repeat='order in orderz' ng-click='toOrderDetails(order.order_id)'>
+			<td>{{order.order_id}}</td>
+			<td>{{order.fDate}}, {{order.fTime}}</td>
+			<td>{{order.client_contact_first_name}} {{order.client_contact_name}}</td>
+			<td>{{order.client_firm_name}}</td>
+		</tr>
+	</table>
+</div>

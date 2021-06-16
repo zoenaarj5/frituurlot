@@ -1,0 +1,50 @@
+<!--div class='page-title'>Shop Content</div-->
+<div>
+	<div><i>{{tranz.totalPrice}} = € </i><b>{{totalPrice}}</b></div>
+	<div id='shop-search-box'>
+		<!--input type='text' ng-model='searchCrit' placeholder='{{tranz.findProduct}}'><button title='{{tranz.resetSearch}}' ng-click='resetSearchCrit()'><img src="img/empty-search.png"></button-->
+		<input type='text' ng-model='searchCrit' placeholder='{{tranz.findProduct}}'>
+		<button title='{{tranz.resetSearch}}' ng-click='resetSearchCrit()'><img src="img/reset-bis.png"></button>
+	</div>
+	<div id='product-super-list'><!-- ng-init='initAccordion()'-->
+		<div class='product-list' ng-repeat='pg in productGroupz|filter:{product_group_code:"!ALL"}|filter:{product_group_code:"!SAN"}|filter:{product_group_code:"!SAU"}' id='product-list-{{pg.product_group_code}}'>
+			<h3><!-- ng-click='accordionMove(pg.product_group_code)'-->{{pg.s_translation_name}}</h3>
+			<table>
+				<tr><th>ID</th><th>{{tranz.productNameColumn}}</th><th>{{tranz.productPriceColumn}}</th><th>{{tranz.reduction}}</th><th>{{tranz.cartQuantity}}</th><!--th>{{tranz.fullReduxColumn}}</th--><th>{{tranz.addedAmount}}</th></tr>
+				<tr ng-repeat='ol in orderLines | filter:searchCrit | filter:{groups:pg.product_group_code}'>	
+					<td>{{ol.product.product_id}}</td><td class='prod-name-box' ng-click='toggleDescriptions()'>{{ol.product.s_translation_name}}</td>
+					<!--td class='prod-descr-box'>{{ol.product.s_translation_description}}</td-->
+					<td>{{ol.product.product_price}}</td>
+					<td>{{ol.redux}}</td>
+					<td>{{ol.cartQuantity}}</td>
+						<!--td>{{ol.fullRedux}}</td-->
+					<td>{{ol.totalLinePrice}}</td>
+					<!--td><button class='undo-button' ng-click='undoAddToCart(img	)'><ol src="img/undo-icon.png"></button></td-->
+					<td><button class='add-button' ng-click='addToCart(ol)'><img src="img/add-icon.png"></button></td>
+					<td><button class='reset-button' ng-click='resetCartQuantity(ol)'><img src="img/remove-icon.png"></button></td><!--td>{{ol.groups}}</td-->
+					<!--td><button class='subtract-button' ng-click='subtractFromCart(ol)'><img src="img/subtract-icon.png"></button></td-->
+					<!--div><i>{{tranz.total}}=</i><b>{{ol.totalLinePrice}}</b></div-->
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id='cart-box'>
+	<div id='shop-top'>
+		<!--button ng-click='resetCart(1)' title='>{{tranz.emptyCart}}'><img src="img/delete-ter.png"></button>
+		<button ng-click='viewCart("cart-box",2000,1500)' class='cart-box-shower' title='{{tranz.viewCart}}'><img src="img/eye-icon.png"></button>
+		<button ng-click='viewCart("cart-box",2000,1500)' class='cart-box-hider' title='{{tranz.viewCart}}' hidden='hidden'><img src="img/eye-icon-trans.png"></button>
+		<button ng-click='sendCart()' title='{{tranz.sendCart}}'><img src="img/send-order.png"></button-->
+		<button ng-click='resetCart(1)'>{{tranz.emptyCart}}</button>
+		<!--button ng-click='viewCart("cart-box",2000,1500)' class='cart-box-shower'>{{tranz.viewCart}}</button-->
+		<button ng-click='viewCart("cart-box",2000,1500)' class='cart-box-hider' hidden='hidden'>{{tranz.hideCart}}</button>
+		<button ng-click='sendCart()'>{{tranz.sendCart}}</button>
+	</div>
+		<table>
+			<caption>{{tranz.cartConfirmTitle}}</caption>
+			<tr><th>{{tranz.productNameColumn}}</th><th>{{tranz.productPriceColumn}}</th><th>{{tranz.cartQuantity}}</th><!--th class='PCAndTabletOnly'>{{tranz.productDescriptionColumn}}</th--><!--th>{{tranz.reduxColumn}}</th--><th>{{tranz.fullReduxColumn}}</th><th>{{tranz.totalLinePriceColumn}}</th><th>{{tranz.cancelProduct}}</th></tr>
+			<tr ng-repeat='ol in orderLines | filter:isValidOrderLine'><td>{{ol.product.s_translation_name}}</td><td>€ {{ol.product.product_price}}</td><td>{{ol.cartQuantity}}</td><!--td class='PCAndTabletOnly'>{{ol.product.s_translation_description}}</td--><!--td>€ {{ol.redux}}</td--><td>€ {{ol.fullRedux}}</td><td>€ {{ol.totalLinePrice}}</td><td><button class='reset-button' ng-click='resetCartQuantity(ol)'><img src="img/remove-icon.png"></button></td></tr>
+			<tr><td colspan='4'>GRAND TOTAL</td><td>€ {{totalPrice}}</td></tr>
+		</table>
+		<div id='cart-conf-comment-box'><p>{{tranz.COMMessage}}</p><textarea rows="2" ng-model='cartComment' placeholder='{{tranz.newOrderMessage}}'></textarea></div>
+	</div>
+</div>

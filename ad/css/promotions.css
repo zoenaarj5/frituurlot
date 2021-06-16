@@ -1,0 +1,10 @@
+#promotions-box table{
+	border-collapse: collapse;
+	margin-left:10%;
+	width:80%;
+}#promotions-box table th,#promotions-box table td{
+	border:solid 1px;	
+}#promotions-box table th>img,#promotions-box table td>img{
+	height:1.5em;
+	width:1.5em;
+}

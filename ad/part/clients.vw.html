@@ -1,0 +1,27 @@
+<h2>Clients content</h2>
+<div id='clients-box'>
+	<table>
+		<tr>
+			<th>{{tranz.clientId}}</th>
+			<th>{{tranz.clientContactName}}</th>
+			<th>{{tranz.clientContactFirstName}}</th>
+			<th>{{tranz.clientContactEmail}}</th>
+			<th>{{tranz.clientContactGSM}}</th>
+			<th>{{tranz.clientCompanyName}}</th>
+			<th>{{tranz.clientCompanyPhone}}</th>
+			<th>{{tranz.clientCompanyFax}}</th>
+			<th>{{tranz.clientActive}}</th>
+		</tr>
+		<tr ng-repeat='client in clientz' ng-click='toOrders(client.client_id)'>
+			<td>{{client.client_id}}</td>
+			<td>{{client.client_contact_name}}</td>
+			<td>{{client.client_contact_first_name}}</td>
+			<td>{{client.client_contact_email}}</td>
+			<td>{{client.client_contact_gsm}}</td>
+			<td>{{client.client_firm_name}}</td>
+			<td>{{client.client_firm_phone}}</td>
+			<td>{{client.client_firm_fax}}</td>
+			<td><img src="../ge/img/yn/{{client.activeImg}}.png"></td>
+		</tr>
+	</table>
+</div>

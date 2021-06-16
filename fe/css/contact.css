@@ -1,0 +1,18 @@
+#geo{
+	background-image: url('../img/frituur-plan.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border:solid 1px orange;
+	height:20em;
+	margin:auto;
+	width:96%;
+}
+#contact-data-box>div{
+	display:inline-block;
+	float:left;
+	margin-left:1%;
+	width:20%;
+}
+#contact-data-box>div>h3{
+	color:#FC7;
+}

@@ -1,0 +1,1 @@
+angular.module('AD-controllers',['AD-clientsController','AD-languageController','AD-productsController','AD-homeController','AD-menuController','AD-orderDetailsController','AD-ordersController','AD-promotionsController']);

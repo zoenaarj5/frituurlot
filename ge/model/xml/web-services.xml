@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+	<translation>
+		<language>fr</language>
+		<language>nl</language>
+	</translation>
+	<web-service name='addProduct'>
+		<data-input name='price'>
+			<data-name>price</data-name>
+			<data-regex>^\d+(\.\d+)?$</data-regex>
+		</data-input>
+		<data-input nullable="">
+			<data-name>active</data-name>
+			<data-regex>[01]</data-regex>
+		</data-input>
+		<data-translation type='s'>
+			<data-name>name</data-name>
+			<data-regex></data-regex>
+		</data-translation>
+		<data-translation type='s'>
+			<data-name>description</data-name>
+			<data-regex></data-regex>
+		</data-translation>
+	</web-service>
+	<web-service name='addProductGroup'>
+		<data-input>
+			<data-name>active</data-name>
+			<data-regex>[01]</data-regex>
+		</data-input>
+		<data-translation type='s'>
+
+		</data-translation>
+	</web-service>
+	<web-service name='addPromotion'>
+		<data-input>
+			<data-name>value</data-name>
+			<data-regex></data-regex>
+		</data-input>
+		<data-input>
+			<data-name>promotableId</data-name>
+			<data-regex></data-regex>
+		</data-input>
+		<data-input>
+			<data-name nullable=''>startDate</data-name>
+			<data-regex>\d\d\?/\d\d?\/</data-regex>
+		</data-input>
+		<data-input>
+			<data-name>endDate</data-name>
+			<data-regex></data-regex>
+		</data-input>
+		<data-input nullable=''>
+			<data-name>stopDate</data-name>
+			<data-regex></data-regex>
+		</data-input>
+	</web-service>
+</root>

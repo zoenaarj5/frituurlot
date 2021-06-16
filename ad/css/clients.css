@@ -1,0 +1,9 @@
+#clients-box table{
+	border-collapse: collapse;
+	width:80%;
+}#clients-box table th,#clients-box table td{
+	border:solid 1px;
+}#clients-box table th>img,#clients-box table td>img{
+	height:1.5em;
+	width: 1.5em;
+}

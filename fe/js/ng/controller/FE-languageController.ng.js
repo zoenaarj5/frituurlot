@@ -1,0 +1,11 @@
+angular.module('FE-languageController',[])
+	.controller('FELanguageController',function($scope,$rootScope,GELanguageFactory,FEViewTranslationFactory){
+		$scope.languages=GELanguageFactory.getLanguages();
+		$scope.tranz=FEViewTranslationFactory.getTranslations('language');
+		$scope.setLanguage=function(languageCode){
+			if(confirm($scope.tranz.changeRequestConfirmation)){
+				GELanguageFactory.setLanguage(languageCode);
+			}
+		};
+	})
+;

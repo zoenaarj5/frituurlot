@@ -1,0 +1,146 @@
+	body{
+		background-image: url("../../ge/img/site/shoestringfries.jpg");
+		background-color:#974;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	#mainBox{
+		position:fixed;
+		background-color:rgba(15,14,10,.8);
+		width:100%;
+		padding-bottom:15%;
+		padding-left:20%;
+		padding-right:20%;
+		padding-top:15%;
+		top:0%;
+		left:0%;
+	}
+	.galleryBox{
+		background-color:rgba(70,50,0,.8);
+		position:relative;
+		display:grid;
+		grid-template-columns:repeat(3,1fr);
+		grid-gap:1em;
+		padding:1em;
+		width:100%;
+	}
+	.galleryImageBox{
+		position:relative;
+		display:inline-block;
+		border:solid 1px #FEA;
+	}
+	.galleryImageBox>a{
+		height:100%;
+		width:100%;
+	}
+	.galleryImageBox>a>img{
+		height:100%;
+		width:100%;
+	}
+/*	.galleryBox{
+		background-color:rgba(2,2,2,.8);
+		display:grid|inline-grid;
+		padding:5%;
+		position:fixed;
+		top:0%;
+		left:0%;
+		width:100%;
+	}
+	.galleryImageBox{
+		border:solid 1px #FEA;
+		height:4%;
+		margin-top:3%;
+		margin-left:3%;
+	}
+	.galleryImageBox>a{
+		height:100%;
+		width:100%;
+	}
+	.galleryImageBox>a>img{
+		height:100%;
+		width:100%;
+	}*/
+	.lightBoxArrowImageContainer{
+		background:none;
+	}
+	.lightBoxArrowImage{
+		position:fixed;
+		display:none;
+		border-radius: 50%;
+		cursor:pointer;
+		background-color:#FFF;
+		top:40%;
+		height:3em;
+		width:3em;
+		z-index: 1000;
+	}
+	#lightBoxArrowImageLeft{
+		left:3%;
+	}
+	#lightBoxArrowImageRight{
+		right:3%;
+	}
+	.lightBoxContainer{
+		background-color:rgba(44,44,144,0.7);
+		left:20%;
+	}
+	.lightBoxImageBox{
+		background-color: rgba(10,10,10,0.5);
+		padding:5%;
+		position:fixed;
+		top:0;
+		left: 0;
+		width:100%;
+		height:100%;
+		display:none;
+		z-index: 900;
+	}
+	.lightBoxImageBox>img{
+		position:fixed;
+		border:solid 5px #FEA;
+/*			border-radius:10%;*/
+		cursor:pointer;
+		margin-top:5%;
+		margin-left:10%;
+		width:80%;
+		animation-duration: 1.5s;
+		animation-name:fadeIn;
+	}.lightBoxImageBox:target{
+		display:block;
+	}
+	.focusGalleryPic{
+		display:block;
+	}
+	@media only screen and (min-width: 1096px){
+		.lightBoxImageBox>img{
+			margin-top:0%;
+			animation-name:fadeIn4LargeScreen;
+		}/*
+		.lightBoxArrowImage{
+			top:45%;
+		}*/
+	}
+	@keyframes fadeIn4LargeScreen{
+		0%{
+			margin-top:10%;
+			margin-left:40%;
+			width:0%;
+		}
+		100%{
+			margin-top:0%;
+			margin-left:10%;
+			width:80%;
+		}
+	}
+	@keyframes fadeIn{
+		0%{
+			margin-top:20%;
+			margin-left:40%;
+			width:0%;
+		}
+		100%{
+			margin-top:5%;
+			margin-left:10%;
+			width:80%;
+		}
+	}

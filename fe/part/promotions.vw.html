@@ -1,0 +1,7 @@
+<h2>{{tranz.pageTitle}}</h2>
+<div id='promotion-box'>
+	<table>
+		<tr><th>{{tranz.productName}}</th><th>{{tranz.promotionValue}}</th><!--th>{{tranz.promotionType}}</th--><th>{{tranz.promotionStartDate}}</th><th>{{tranz.promotionEndDate}}</th></tr>
+		<tr ng-repeat='promo in promotionz'><td>{{promo.s_translation_name}}</td><td>{{expressPromo(promo)}}</td><td>{{promo.promotion_start_date}}</td><td>{{promo.promotion_end_date}}</td></tr>
+	</table>
+</div>

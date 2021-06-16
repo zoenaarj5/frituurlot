@@ -1,0 +1,17 @@
+<h2>Promotion Edit Content</h2>
+<div id='promotionEdit-box' ng-init='fetchEditPromo()'>
+	<div class='top-bar'>
+		<button ng-click='toPromotions()'>{{tranz.back}}</button>
+		<button ng-click='stopPromotion()'>{{tranz.stopPromo}}</button>
+	</div>
+	<table>
+		<tr><th>{{tranz.editPromoActiveProduct}}</th><td>{{editPromo.product_active}}</td></tr>
+		<tr><th>{{tranz.editPromoProductName}}</th><td>{{editPromo.s_translation_name}}</td></tr>
+		<tr><th>{{tranz.editPromoProductDescr}}</th><td>{{editPromo.s_translation_description}}</td></tr>
+		<tr><th>{{tranz.editPromoProductPrice}}</th><td>{{editPromo.product_price}}</td></tr>
+		<tr><th>{{tranz.editPromoValue}}</th><td>{{editPromo.sValue}}</td></tr>
+		<tr><th>{{tranz.editPromoStartDate}}</th><td>{{editPromo.promotion_start_date}}</td></tr>
+		<tr><th>{{tranz.editPromoEndDate}}</th><td>{{editPromo.promotion_end_date}}</td></tr>
+		<tr><th>{{tranz.editPromoStopDate}}</th><td>{{editPromo.sStopDate}}</td></tr>
+	</table>
+</div>

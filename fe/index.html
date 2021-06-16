@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Begische Snack-Frituur, in Lot gebaseerd. Gratis levering in Lot. Bestelling gezonden door fax of email, levering op het werkplaats. Snack-Friterie belge, basée à Lot. Livraison graduite à Lot. Commande envoyée par fax ou par mail, livraison sur le lieu de travail.">
+		<meta name="keywords" content="Frituur,België,Snack,friet,friterie,Belgium,Lot,1651,frikandel,sate,merguez,hamburger,cheeseburger,fishburger,cervela,balletjes,kroket,loempia,viandel,kip,taco,mosselen,worst,pitta,vol-au-vent,stofvlees">
+		<meta name="author" content="Kavuna Web Design">
+		<title>Frituur van Lot</title>
+		<script type="text/javascript" src="../ge/js/lib/angular.min.js"></script>
+		<!--script type="text/javascript" src="js/lib/angular.map.js"></script-->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="../ge/js/lib/angular-route.min.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-languageFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-mathFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-dateFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-orderFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-dataTransformerFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-photoGalleryFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-productFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-promotionAdvertFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-promotionFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-clientFactory.ng.js"></script>
+		<script type="text/javascript" src="../ge/js/ng/factory/GE-factories.ng.js"></script>
+		<script type="text/javascript" src="js/ng/factory/FE-registrationFactory.ng.js"></script>
+		<script type="text/javascript" src="js/ng/factory/FE-userLogFactory.ng.js"></script>
+		<script type="text/javascript" src="js/ng/factory/FE-menuFactory.ng.js"></script>
+		<script type="text/javascript" src="js/ng/factory/FE-viewTranslationFactory.ng.js"></script>
+		<script type="text/javascript" src="js/ng/factory/FE-factories.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-downLeftAdController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-userLogController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-shopController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-homeController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-languageController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-passwordChangeController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-photoGalleryController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-galleryController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-registrationController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-menuController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-contactController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-animationController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-myOrdersController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-promotionAdvertController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-promotionController.ng.js"></script>
+		<script type="text/javascript" src="js/ng/controller/FE-controllers.ng.js"></script>
+		<script type="text/javascript" src="js/ng/FE.ng.js"></script>
+
+		<script type="text/javascript" src="../ge/js/jq/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/jq/animation.jq.js"></script>
+		<script type="text/javascript" src="../ge/js/bs/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../ge/css/bs/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/card.css">
+		<link rel="stylesheet" type="text/css" href="css/cardView.css">
+		<link rel="stylesheet" type="text/css" href="css/myOrders.css">
+		<link rel="stylesheet" type="text/css" href="css/myOrderDetails.css">
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/userLog.css">
+		<link rel="stylesheet" type="text/css" href="css/cartConfirm.css">
+		<!--link rel="stylesheet" type="text/css" href="css/photoGallery.css"-->
+		<link rel="stylesheet" type="text/css" href="css/gallery.css">
+		<link rel="stylesheet" type="text/css" href="css/promotionAdverts.css">
+		<link rel="stylesheet" type="text/css" href="css/registration.css">
+		<link rel="stylesheet" type="text/css" href="css/contact.css">
+		<link rel="stylesheet" type="text/css" href="css/contact-bis.css">
+		<link rel="stylesheet" type="text/css" href="css/shop1By1.css">
+		<link rel="stylesheet" type="text/css" href="css/shop.css">
+		<link rel="stylesheet" type="text/css" href="css/promotions.css">
+		<link rel="stylesheet" type="text/css" href="css/registration.css">
+		<link rel="stylesheet" type="text/css" href="css/userLog.css">
+		<link rel="stylesheet" type="text/css" href="css/responsiveDesign.css">
+		<link rel="stylesheet" type="text/css" href="../ge/wow/engine1/style.css"></link>
+	</head>
+	<body ng-app='FE' class="container">
+		<!--div class='splash' ng-cloak=''>Loading...</div-->
+		<!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script-->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<header>
+			<div id='top-menu-toggle-box'>
+				<div>Welkom</div>
+				<div><a href="tel:0493327542">0493327542</a></div>
+				<!--img src="../ge/img/menu.png">
+				<div id='top-menu-text' class='PCAndTabletOnly'>Menu</div-->
+			</div>
+			<div id='top-slider' onclick='window.location="#/home";'>
+				<img src="img/logo-text.png">
+				<!--img src="../ge/img/title-draft.png"-->
+				<!--img src="img/home-slider/frieten.jpg">
+				<img src="img/home-slider/1320428007983.jpg">
+				<img src="img/home-slider/French-Fries.jpg">
+				<img src="img/home-slider/i-stoofvlees.jpg">
+				<img src="img/home-slider/o-geros-tou-morya.jpg">
+				<img src="img/home-slider/01.jpg">
+				<img src="img/home-slider/l_5149_french-fries.jpg"-->
+			</div>
+			<div id='top-logo-box' class='PCAndTabletOnly' onclick='window.location="#/promotionAdverts";'>
+				<!--img src="img/Works.png"-->
+				<img src="img/promotionzsz.png">
+			</div>
+			<div id='top-login-box'>
+				<img onclick='window.location.href="#/userLog";' src="img/userLog.png" title="{{tranz.login}}"/>
+			</div>
+			<div id='language-box' ng-controller='FELanguageController'>
+				<!--a href="#/userLog"><img src="img/userLog.png">{{tranz.login}}</a-->
+				<img ng-repeat='lang in languages' title='{{lang.name}}' ng-click='setLanguage(lang.code)' src="{{'../ge/img/lang/'+lang.code+'.png'}}"/>
+			</div>
+		</header>
+		<div id='top-filler'></div>
+		<div id='middle'>
+			<nav id='menu-box'>
+				<ul ng-controller='FEMenuController'>
+					<!--li><a href="#" onclick="window.open('part/pdf/A vendre.pdf');"><div>OFFRE SPÉCIALE<br><em>SPECIALE AANBIEDING</em></div></a></li-->
+					<li ng-repeat='item in menuItemz' title='{{item.text}}'><a href="#/{{item.page}}"><!--img src="img/{{item.page}}.png"--><div>{{item.text}}</div></a></li>
+				</ul>
+				<div id='qr-code-box'>
+					<img src='http://www.unitag.io/qreator/generate?crs=xnjFkEn%252FP85fCPDXJ%252FXXKg5g6yQi7H4qzUlRVUntU035Re8CX7iHj071HbqF%252BCfYW0fkByoDtlWAYEP%252FkF2dipjP8Ux69VtYkusoonlKTAkgSRnmfwEzhpz3ulb%252BfgcH8xxrpOTbfLtqZS7YE5Pf9g%253D%253D&crd=fhOysE0g3Bah%252BuqXA7NPQ8Wbhlb%252B54peYfS%252BvPLj8QxY9Fh%252FLlQx6r69pMASv%252BmWE6FVnJjZAu4oIWje6s%252F2%252Fw%253D%253D' alt='QR Code'/>
+				</div>
+				<a class="twitter-share-button"
+				  href="https://twitter.com/share">
+				Tweet
+				</a>
+				<script type="text/javascript">
+				window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+				</script>
+				<script src="https://apis.google.com/js/platform.js" async defer>
+				  {lang: 'nl'}
+				</script>
+				<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+				<div class="fb-like" data-href="http://frituurlot.be" data-width="50" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+				<div style="text-align:center;"><script type="text/javascript" src="http://services.webestools.com/cpt_visitors/27221-19-7.js"></script></div><!--a href="http://www.webestools.com/" style="display:block;text-align:center;" title="Tools services webmasters counters generators scripts tutorials free"><img src="http://www.webestools.com/images/ban03.gif" alt="Tools services webmasters counters generators scripts tutorials free" /></a-->
+				<div id="down-left-box" ng-controller="FEDownLeftAdController" style="text-align:center;">
+					<div style="text-align:center;background-color:#FEA"><img src="img/home-pics/hotn-{{languageCode}}.png" style="width:100%;z-index=10000"/></div>
+					<div>
+						<marquee style="font-size:3.5em;font-weight:normal;/*color:rgb(254,78,0);*/color:#FEA;background-color:black;" scrollamount="7">{{tranz.closureMessage}}</marquee>
+					</div>
+				</div>
+			</nav>
+			<div id='middle-middle'>
+				<div id='home-top'>
+					<img src="img/factory.png">
+					<img src="img/home-pics/smart.png">
+					<img src="img/home-pics/resto.png">
+					<img src="img/home-pics/snack_bis.png">
+					<img src="img/home-pics/smart-reverse.png">
+				</div>
+				<div id='wrapper' ng-view='' class='container'></div>
+			</div>
+		</div>
+		<div id='link-box'>
+			<h3>Links & Partners</h3>
+			<ul>
+				<li>Châssis Célia <a href="http://www.chassis-celia.com">chassis-celia.com</a></li>
+			</ul>
+		</div>
+		<div id='bottom-filler'></div>
+		<footer>
+			<div id='designer-data'>&copy;Kavuna Web Design, 
+			<a href="mailto:kaval.80@gmail.com&bcc=kacva@yahoo.com">kaval.80@gmail.com</a>
+			</div>
+			<div id='logged-user-data'>
+				<div id='logged-user-up'>
+					<div id='logged-user-first-name'>{{contactFirstName}}</div>
+					<div id='logged-user-name'>{{contactName}}</div>
+					<div id='logged-user-email'>{{contactEmail}}</div><br>
+				</div>
+				<div id='logged-user-down'>
+					<div id='logged-user-firm-name'>{{firmName}}</div>
+					<div id='logged-user-firm-phone'>{{firmPhone}}</div>
+					<div id='logged-user-firm-fax'>{{firmFax}}</div>
+				</div>
+			</div>
+			<div ng-controller='FEAnimationController' ng-init='initAnim()'></div>
+		</footer>
+	</body>
+</html>

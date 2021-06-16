@@ -1,0 +1,33 @@
+a{
+	color:lightgray;
+}
+a:visited{
+	color:#FE4;
+}
+body{
+	ackground-color: #557;
+	background-color: #575;
+	color:white;
+	font-family: verdana;
+}table{
+	border-collapse: collapse;
+	font-size:1.2em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto
+}table th,table td{
+	border:solid 1px white;
+	height:3em;
+}ul li{
+	list-style: none;
+}.top-bar{
+	text-align: center;
+}
+#wrapper>h2{
+	text-align: center;
+}
+.incorrectField{
+	background-color:black;
+	border:solid 1px red;
+	color:orange;
+}

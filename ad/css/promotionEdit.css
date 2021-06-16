@@ -1,0 +1,11 @@
+#promotionEdit-box table{
+	border-collapse:collapse;
+	margin-left: 10%;
+	width: 80%;
+}#promotionEdit-box table th,#promotionEdit-box table tr{
+	border:solid 1px;
+	height:3em;
+}#promotionEdit-box table th>img,#promotionEdit-box table tr>img{
+	height:1.5em;
+	width:1.5em;
+}

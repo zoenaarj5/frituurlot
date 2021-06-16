@@ -1,0 +1,29 @@
+#myOrderDetails-box table {
+	font-family:'monotype corsiva';
+	font-size:1.5em;
+	text-align: center;
+	width: 100%;
+}#myOrderDetails-box table td,#myOrderDetails-box table th{
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}#myOrderDetails-box table tr{
+	background-color: black;
+	color:white;
+}#myOrderDetails-button-bar{
+	text-align: center;
+	height:3em;
+}#myOrderDetails-button-bar>button{
+	font-size: 1em;
+	height:auto;
+	text-transform: uppercase;
+	width:auto;
+}#myOrderDetails-button-bar>button>img{
+	height:2em;
+	width:2em;
+}#myOrderDetails-title{
+	text-align: center;
+}.order-comment{
+	background-color:white;
+	color:black;
+	text-align:center;
+}

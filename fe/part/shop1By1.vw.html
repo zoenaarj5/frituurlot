@@ -1,0 +1,43 @@
+<!--div class='page-title'>Shop Content</div-->
+<div>
+	<div id='shop-search-box'>
+		<!--input type='text' ng-model='searchCrit' placeholder='{{tranz.findProduct}}'><button title='{{tranz.resetSearch}}' ng-click='resetSearchCrit()'><img src="img/reset-bis.png"--></button>
+	</div>
+	<div id='shop-top'>
+		<button ng-click='toCard()' title='{{tranz.backToCard}}'><img src="img/rew.png">{{tranz.backToCard}}</button>
+		<button ng-click='resetCart(1)' title='{{tranz.emptyCart}}'><img src="img/delete-ter.png">{{tranz.emptyCart}}</button>
+		<!--button ng-click='viewCart()' title='{{tranz.viewCart}}'><img src="img/eye-icon.png"></button-->
+		<button ng-click='viewCart()' title='{{tranz.viewCart}}'><img src="img/fwd-bis.png">{{tranz.viewCart}}</button>
+		<!--button ng-click='sendCart()' title='{{tranz.sendCart}}'><img src="img/fwd.png"></button-->
+	</div>
+	<div><i>{{tranz.totalPrice}} = € </i><b>{{totalPrice}}</b></div>
+	<div id='product-list'>
+		<div class='product-box'>
+			<div class='product-top'><img src="img/snack.png"><b class='prod-name-box' ng-click='toggleDescriptions()'>{{currentOL.product.s_translation_name}}</b>
+			</div>
+			<div class='prod-descr-box'>{{currentOL.product.s_translation_description}}</div>
+			<div class='prod-number-box'><i>{{tranz.addedAmount}}: <br></i><b>{{currentOL.cartQuantity}}</b><span class='prod-price-box'> x (<span class='price-span'>€&nbsp;{{currentOL.product.product_price}}</span> - €&nbsp;{{currentOL.redux}})</span> = <span class='prod-line-total'>€&nbsp;{{currentOL.totalLinePrice}}</span><br/> +<input type='number' min='1' max='30' placeholder='0' ng-model='currentOL.nextQuantity'/>
+			</div>
+			<div>{{tranz.reduction}}={{currentOL.cartQuantity}} x <span class='price-span'>€ {{currentOL.redux}}</span>=<b>€&nbsp;{{currentOL.fullRedux}}</b></div>	
+			<button class='undo-button' ng-click='undoAddToCart(currentOL)'><img src="img/undo-icon.png"></button>
+			<button class='add-button' ng-click='addToCart(currentOL)'><img src="img/add-icon.png"></button>
+			<button class='reset-button' ng-click='resetCartQuantity(currentOL)'><img src="img/remove-icon.png"></button>
+			<button class='subtract-button' ng-click='subtractFromCart(currentOL)'><img src="img/subtract-icon.png"></button>
+			<!--div class='prod-sauce-box' ng-repeat='sauce in ptgLinkz |filter:{product_group_code:"SAU"}'><input type='number' min='1' max='30' placeholder='0' ng-model='currentOL.sauceAddz[currentOL.product.product_id][sauce.product_id]'>{{sauce.product_translation_name}}<img src="../ge/img/yn/active_{{sauceAddz[currentOL.product.product_id][sauce.product_id]>0?1:0}}.png"></div-->
+			<!--div><i>{{tranz.total}}=</i><b>{{ol.totalLinePrice}}</b></div-->
+		</div>
+		<div class='sauce-box'>
+			<h3><i>{{tranz.chooseSauce}}</i></h3>
+			<table>
+				<tr ng-repeat='sauce in currentOL.sauceAddz'>
+					<td>+<input type='number' ng-model='sauce.nextQuan' min='0' max='30' placeholder='0'></td><td><button ng-click='addSauce(sauce,sauce.nextQuan)'>{{sauce.product.product_translation_name}}</button></td>
+					<td><!--img src='../ge/img/yn/active_{{sauce.quantity>0?1:0}}.png'--></td>
+					<td><b>{{sauce.quantity}}</b></td>
+					<td><button ng-click='addSauce(sauce,sauce.nextQuan,1)'><img src="img/subtract-icon.png"></button></td>
+					<td><button ng-click='resetSauce(sauce)'><img src="img/undo-icon.png"></button></td>
+					<td>{{sauce.totalPrice}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

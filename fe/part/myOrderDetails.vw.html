@@ -1,0 +1,17 @@
+<div id='myOrderDetails-box' ng-init='init(fetchCurrentOrderLines)'>
+	<div id='myOrderDetails-button-bar'>
+		<button ng-click='toMyOrders()'><img src="img/rew.png">{{tranz.back}}</button>
+		<button ng-click='printOrder()'><img src="img/fax-icon.png">{{tranz.printOrder}}</button>
+	</div>
+	<div id='myOrderDetails-title'>
+		<h2>{{tranz.orderNr}} {{orderLinez[0].order_id}}</h2> 
+		<h4>{{tranz.firm}}: {{currentOrder.client_firm_name}} ({{tranz.orderFrom}} {{currentOrder.client_contact_first_name}} {{currentOrder.client_contact_name}})</h4>
+		<h3>{{tranz.sendingDate}}: {{currentOrder.fDate}}, {{currentOrder.fTime}}</h3>
+	</div>
+	<div class='order-comment' ng-repeat='com in currentOrder.comments'>{{com.order_comment_content}}</div>
+	<table>
+		<tr><th>{{tranz.productName}}</th><th>{{tranz.OLPrice}}</th><th>{{tranz.OLReduction}}</th><th>{{tranz.OLQuantity}}</th><th>{{tranz.OLTotal}}</th></tr>
+		<tr ng-repeat='ol in orderLinez'><td>{{ol.s_translation_name}}</td><td>{{ol.order_line_price}}</td><td>{{ol.order_line_reduction}}</td><td>{{ol.order_line_quantity}}</td><td>{{ol.total}}</td></tr>
+		<tr><td colspan='4'>GRAND TOTAL</td><td>{{orderLinesTotal}}</td></tr>
+	</table>
+</div>

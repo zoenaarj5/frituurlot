@@ -1,0 +1,41 @@
+<div id='signup-box'>
+	<h2>{{tranz.pageTitle}}</h2>
+	<fieldset>
+		{{tranz.pageIntro}}<br/><a href="#/userLog">{{tranz.registrationDone}}</a>
+	</fieldset>
+	<fieldset>
+		<legend>{{tranz.contactTitle}}</legend>
+		<input type='text' ng-model='userData.contactEmail' placeholder='{{tranz.contactEmail}}'>
+		<input type='text' ng-model='userData.contactEmailVerif' placeholder='{{tranz.contactEmailVerif}}'>
+		<input type='text' ng-model='userData.contactGSM' placeholder='{{tranz.contactGSM}}'>
+		<input type='text' ng-model='userData.contactName' placeholder='{{tranz.contactName}}'>
+		<input type='text' ng-model='userData.contactFirstName' placeholder='{{tranz.contactFirstName}}'>
+	</fieldset>
+	<fieldset>
+		<legend>{{tranz.firmTitle}}</legend>
+		<input type='text' ng-model='userData.firmName' placeholder='{{tranz.firmName}}'>
+		<input type='text' ng-model='userData.firmPhone' placeholder='{{tranz.firmPhone}}'>
+		<input type='text' ng-model='userData.firmFax' placeholder='{{tranz.firmFax}}'>
+		<input type='text' ng-model='userData.addressStreet' placeholder='{{tranz.addressStreet}}'>
+		<input type='text' ng-model='userData.addressNumber' placeholder='{{tranz.addressNumber}}'>
+		<input type='text' ng-model='userData.addressBox' placeholder='{{tranz.addressBox}}'>
+		<input type='text' ng-model='userData.addressZipCode' placeholder='{{tranz.addressZipCode}}'>
+		<input type='text' ng-model='userData.addressCity' placeholder='{{tranz.addressCity}}'>{{userData.addressCity}}
+	</fieldset>
+	<fieldset>
+		<legend>{{tranz.logTitle}}</legend>
+		<input type='password' ng-model='userData.password' placeholder='{{tranz.password}}'>{{userData.password}}
+		<input type='password' ng-model='userData.passwordVerif' placeholder='{{tranz.passwordVerif}}'>{{userData.passwordVerif}}
+		<br/><!--label>{{tranz.securityQuestion}}</label-->
+		<select ng-model='userData.securityQuestionId'>
+			<option value=''>-------------{{tranz.securityQuestion}}-------------</option>
+			<option ng-repeat='qstn in securityQuestionz' value='{{qstn["security_question_id"]}}'>{{qstn.xs_translation_content}}</option>
+		</select>{{userData.securityQuestionId}}
+		<input type='text' pattern='^[a-zA-Z](\ [a-zA-Z]+)*$' ng-model='userData.securityAnswer' placeholder='{{tranz.securityAnswer}}'>
+	</fieldset>
+	<fieldset>
+		<legend>{{tranz.confirmationTitle}}</legend>
+		<button ng-click='register()'>{{tranz.sendUserData}}</button>
+		<button ng-click='resetData()'>{{tranz.emptyUserData}}</button>
+	</fieldset>
+</div>

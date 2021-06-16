@@ -1,0 +1,15 @@
+<div id='login-box'>
+	<h2>{{tranz.pageTitle}}</h2>
+	<div>{{tranz.topMessage}}</div>
+	<fieldset>
+		<legend>{{tranz.pageTitle}}</legend>
+		<select ng-model='loginField'>
+			<option ng-repeat='lf in loginFieldz' value='{{lf}}'>{{tranz[lf]}}</option>
+		</select>
+		<input type='text' ng-model='loginData' placeholder='{{tranz[loginField]}}'>
+		<input type='password' id='input_password' placeholder='{{tranz.password}}' ng-model='password'>{{userData.password}}
+		<button ng-click='logClient()'>{{tranz.sendData}}</button>
+		<!--br><a ng-click='toPasswordChange()'>{{tranz.forgottenPassword}}</a-->
+		<br><a href="#/registration">{{tranz.toRegistration}}</a>
+	</fieldset>
+</div>

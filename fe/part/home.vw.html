@@ -1,0 +1,35 @@
+<div id='home-data-box' ng-init='initAnim()'>
+		
+	<section id="home-slider">
+			<!--img style="display:block;width:100%;text-align:center;overflow:hidden;overflow-x:hidden;" src="img/No BC.png"/-->
+		<div id="sldPrev" class="sldChanger"><button ng-click="rew()"><img src="img/navigate-left-icon.png" alt="PREV"></button></div>
+		<div id="sldImgCont">
+			<!--div class="sldImgElt" ng-repeat="img in homeImagez"><img src="img/slider-home/{{img}}.jpg" alt="..."/></div-->
+			<div class="sldImgElt" ng-repeat="img in homeImagez"><img src="img/gallery/images/{{img}}.jpg" alt="{{img}}"/></div>
+		</div>
+		<div id="sldNext" class="sldChanger"><button ng-click="fwd()"><img src="img/navigate-right-icon.png" alt="NEXT"></button></div>
+	</section>
+	<section id="home-weekly-plan">
+		<table>
+			<tr>
+				<th></th>
+				<th colspan="2"></th>
+				<th colspan="2">{{tranz.holidays}}</th>
+			</tr>	
+			<tr>
+				
+				<th><b>{{tranz.openingHours}}</b></th>
+				<th>{{tranz.fromTime}}</th>
+				<th>{{tranz.toTime}}</th>
+				<th>{{tranz.hDFromTime}}</th>
+				<th>{{tranz.hDToTime}}</th>
+			</tr>
+			<tr ng-repeat="day in weeklyPlan" class="timetable-line {{$index<=4 && 'timetable-line-begin-week' || 'timetable-line-end-week'}}">
+				<th>{{day.weekDay}}</th>
+				<td ng-repeat="time in day.times" class="timetable-cell {{$index>1 && 'timetable-cell-public-holiday' || 'timetable-cell-working-day'}}">{{time[0]}}:{{time[1]}}</td>
+			</tr>
+		</table>
+		<div class="low-announcement">{{tranz.studentWanted}}</div>
+		<div id="prompteur"><marquee>{{tranz.xMasSchedule}}</marquee></div>
+	</section>
+</div>

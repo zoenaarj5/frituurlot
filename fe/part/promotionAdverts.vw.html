@@ -1,0 +1,12 @@
+<h2>{{tranz.pageTitle}}</h2>
+<div id='promotion-advert-box'>
+	<div ng-repeat="advert in advertz" class="advert-cont row">
+		<div class="advert-message-box col-sm-4 col-sm-offset-1">
+			<div class="row text-center" ng-repeat="msg in advert.messages">{{msg}}</div>
+		</div>
+		<div class="advert-pic-cont col-sm-5 col-sm-offset-1" id="advert-pic-cont-{{advert.id}}">
+			<img src="../ge/img/promo-pics/{{pic}}.JPG" ng-repeat="pic in advert.pics"/>
+		</div>
+		<br/>
+	</div>
+</div>

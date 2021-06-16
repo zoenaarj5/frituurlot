@@ -1,0 +1,148 @@
+/*.prod-sauce-box{
+	color:#F82;
+	ackground-color:lightblue;	
+	padding:0;
+	width:100%;
+}.prod-sauce-box img{
+	height:5px;
+	width:5px;
+}*/.sauce-box{
+	border:solid 1px #FE8;
+	border-radius: 5px 10px 5px 10px;
+	overflow: scroll;
+}.sauce-box::-webkit-scrollbar{
+	height:0px;
+	width:0px;
+}.sauce-box table td,.sauce-box table th{
+	font-size:2em;
+	text-align: center;
+}.sauce-box table img{
+	height:2.5em;
+	width:2.5em;
+}.sauce-box table input{
+	text-align: center;
+}.sauce-box table button{
+	padding:1em;
+}.sauce-box input,.sauce-box button{
+	height:5em;
+	width: auto;
+}/*#product-list{
+	background-image:url('img/fries.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}*/
+.price-span{
+	color:lightblue;
+}.product-box{
+/*	background-color:rgba(31,31,31,.8);*/
+	background-color: rgba(25,20,25,.8);
+	box-shadow: 0px 0px 2px #FA0;
+	-moz-box-shadow: 0px 0px 2px #FA0;
+	-webkit-box-shadow: 0px 0px 2px #FA0;
+	border:solid 1px white;
+	border-radius: 0px 10px 0px 10px;
+	display:inline-block;
+	float:top;
+	margin-left:5%;
+	margin-top:1em;
+	margin-bottom:1em;
+	padding:3%;
+	width:80%;
+}.product-box button{
+	border-radius: 3px;
+	border-style: none;
+	margin-top:0.5em;
+	margin-left:2.5%;
+	width:7em;
+	height:7em;
+}.product-box button>img{
+	height:100%;
+	width:100%;
+}.product-box .product-top{
+	height:3em;
+	text-align: center;
+	vertical-align: middle;
+	width:100%;
+}.product-box .product-top>img{
+	display:inline-block;
+	float:left;
+	height:100%;
+	width:30%;
+}.product-box .product-top>.prod-name-box{
+	color:#FE8;
+	cursor: pointer;
+	font-size:1.1em;
+	height:100%;
+	text-align:center;
+	width:70%;
+}.product-box .prod-descr-box{
+	display: none;
+	background-color: rgba(220,140,20,0.2);
+}.product-box .prod-number-box{
+	font-size: 0.9em;
+}.product-box .prod-number-box>input[type='number']{
+	font-size: 2em;
+	height:1em;
+	text-align: center;
+}.product-box .prod-line-total{
+	color:#FE8;
+	font-size:2em;
+}.product-box .add-button{
+	background-color:lightgreen;
+	/* #0F8*/
+}.product-box .subtract-button{
+	background-color:pink;
+}.product-box .undo-button{
+	background-color:orange;
+}.product-box .reset-button{
+	background-color: #F50;
+}#product-list{
+	border-radius: 0px 10px 0px 10px;
+	background-color: black;
+	height: 22em;
+	overflow:scroll;
+	width: 100%;
+}#product-list::-webkit-scrollbar{
+	background-color:blue;
+	width:0px;
+	height:0px;
+}#product-list>div{
+	background-color: rgba(25,20,25,.8);
+	display:inline-block;
+	float: left;
+	height: 90%;
+	margin-left: 5%;
+	padding:2%;
+	width:40%;
+}#shop-top,#shop-search-box{
+	display: inline;
+	width:100%;
+}#shop-top>button{
+	font-size: 1em;
+	height:5em;
+	text-align: center;
+	text-transform: uppercase;
+	width:10em;
+}#shop-top>button>img{
+	height:2.5em;
+	width:2.5em;
+}#shop-search-box{
+	margin-top:1em;
+	height:4em;
+}#shop-search-box>button{
+	float:left;
+	height:4em;
+	width:5em;
+}
+#shop-search-box>button>img{
+	height:100%;
+	width:100%;
+}
+#shop-search-box>input[type='text']{
+	border:solid 1px #FE8;
+	float:left;
+	font-size: 1.5em;
+	height:1.5em;
+	text-align: center;
+	width:60%;
+}

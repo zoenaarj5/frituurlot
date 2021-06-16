@@ -1,0 +1,31 @@
+#cardView-box{
+	background-color:none;
+	position:relative;
+	width:100%;
+	height:auto;
+}#cardView-box >img{
+	display:inline-block;
+	/*float:left;*/
+	height:auto;
+	width:100%;
+}
+/*
+#cardView-button-bar{
+	display:inline-block;
+	float:left;
+	height:3em;
+	text-align: center;
+	width:100%;
+}#cardView-button-bar>button{
+	font-size: 0.7em;
+	height: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding:1em;
+	text-align: center;
+	text-transform: uppercase;
+}#cardView-button-bar>button:hover{
+	background-color:rgba(0,0,0,0.4);
+}#cardView-top-filler{
+	display:none;
+}*/

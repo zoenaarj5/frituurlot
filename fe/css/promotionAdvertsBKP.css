@@ -1,0 +1,34 @@
+.advert-cont{
+	background-color:#100;
+}.advert-pic-cont{
+	height:3em !important;
+}.advert-pic-cont>img{
+	float:top;
+	height:10px !important;
+	overflow:show;
+}/*.advert-pic-cont>img:hover{*/
+/*	animation:enterAdPicImg 5s;
+	-webkit-animation:enterAdPicImg 5s;*/
+/*	height:250%;
+}*/
+@keyframes enterAdPicImg{
+	0%{
+		border:solid 1px red;
+		height:100%;
+		position:relative;
+	}100%{
+		border:solid 1px green;
+		height:250%;
+		position:fixed;
+	}
+}@-webkit-keyframes enterAdPicImg{
+	0%{
+		border:solid 1px red;
+		height:100%;
+		position:relative;
+	}100%{
+		border:solid 1px green;
+		height:250%;
+		position:fixed;
+	}
+}

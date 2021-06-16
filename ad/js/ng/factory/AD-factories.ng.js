@@ -1,0 +1,1 @@
+angular.module('AD-factories',['AD-formVerifierFactory','AD-menuFactory','AD-viewTranslationFactory']);

@@ -1,0 +1,27 @@
+<h2>Promotions content</h2>
+<div id='promotions-box' ng-init='init()'>
+	<div id='promotions-button-bar'>
+		<button ng-click='toPromoAdd()'>{{tranz.toPromoAdd}}</button>
+	</div>
+	<table>
+		<tr>
+			<th>{{tranz.productActive}}</th>
+			<th>{{tranz.productName}}</th>
+			<th>{{tranz.productPrice}}</th>
+			<th>{{tranz.promotionValue}}</th>
+			<th>{{tranz.promotionStartDate}}</th>
+			<th>{{tranz.promotionEndDate}}</th>
+			<th>{{tranz.promotionStopDate}}</th>
+		</tr>
+		<tr ng-repeat='promo in promotionz' ng-click='toPromoEdit(promo.promotion_id)'>
+			<td><img src='../ge/img/yn/{{promo.productActiveImg}}.png'></td>
+			<td title="{{promo.s_translation_description}}">{{promo.s_translation_name}}</td>
+			<td>{{promo.product_price}}</td>
+			<td>{{promo.sValue}}</td>
+			<td>{{promo.promotion_start_date}}</td>
+			<td>{{promo.promotion_end_date}}</td>
+			<td>{{promo.sStopDate}}</td>
+
+		</tr>
+	</table>
+</div>

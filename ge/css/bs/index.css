@@ -1,0 +1,6 @@
+body{
+	background-color:#25B;
+	color:white;
+}.container .row>div{
+	border:solid 2px white;
+}

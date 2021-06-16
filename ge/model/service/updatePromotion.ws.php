@@ -1,0 +1,50 @@
+<?php
+	session_start();
+	require_once('../class/KeyGenerator.class.php');
+	require_once('../class/NewManager.class.php');
+	$response=array('data'=>0,'result'=>array());
+	$attributes=array('promoId','type','value','startDate','endDate');
+	$optional=array('type','value','startDate','endDate');
+	$loginField=null;
+	$wrongData=array();
+	foreach($attributes as $attr){
+		if(empty($_POST[$attr]) && !in_array($attr,$optional)){
+			$wrongData[]=$attr;
+		}
+	}
+	$response['result'][]=array('input-data-exists',empty($wrongData));
+	if($wrongData){
+		$response['data']++;
+	}else{
+		$fieldTrans=array(
+			'type'=>'type',
+			'value'=>'value',
+			'startDate'=>'start_date',
+			'endDate'=>'end_date'
+		);
+		$toChange=array();
+		foreach($fieldTrans as $field=>$trans){
+			if(!empty($_POST[$field])){
+				$toChange[$trans]=$_POST[field];
+			}
+		}
+		$response['result'][]=array('update-fields-exist',!empty($toChange));
+		if(empty($toChange)){
+			$response['data']++;
+		}else{
+			$result=NewManager::updateElement(
+				'promotion',
+				$toChange,
+				array(
+					array('`promotion`.`id`',$_POST['promoId'])
+				)
+			);
+			$response['result'][]=array('promotion-updated',!empty($result));
+			if($result===false){
+				$response['data']++;
+			}
+		}
+	}
+	$response=newManager::toUTF8($response);
+	echo json_encode($response);
+?>

@@ -1,0 +1,26 @@
+<!--h2>{{tranz.cardTitle}}</h2-->
+<div id='card-top'>
+	<img src="img/product-groups/{{pdtGroupId}}.jpg">
+	<select ng-model='pdtGroupId' id='group_selector'>
+		<!--option value='"*"'>All</option-->
+		<option ng-repeat='pg in productGroupz | filter:{product_group_code:"!"+"SAU"}' value='{{pg.product_group_id}}'>{{pg.s_translation_name}}</option>
+	</select><!--{{pdtGroupId}}-->
+	<input ng-model='searchCrit' placeholder='{{tranz.findProduct}}'>
+	<!--button ng-click='sendCart()' title='{{tranz.sendCart}}'><img src="img/fwd.png"></button-->
+	<!--img src="img/product-groups/{{pdtGroupId}}.jpg"-->
+	<button ng-click='toCardView()' title='{{tranz.viewCard}}'><img src="img/eye-icon.png"><span>{{tranz.viewCard}}</span></button>
+	<button ng-click='viewCart()'><img src="img/order-ter.png">{{tranz.toCart}}</button>
+</div>
+<div id='card-box'>
+	<table>
+		<tr><th>{{tranz.productNameColumn}}</th><th class='PCAndTabletOnly'>{{tranz.productDescriptionColumn}}</th><th>{{tranz.productPriceColumn}}</th></tr>
+		<tr ng-repeat='ptg in ptgLinkz | filter:{product_group_id:pdtGroupId} | filter:searchCrit' ng-click='toShop1By1(ptg.product_id)'><td>{{ptg.product_translation_name}}</td><td class='PCAndTabletOnly'>{{ptg.product_translation_description}}</td><td>€ {{ptg.product_price}}</td></tr>
+	</table>
+	<!--table>
+		<tr><th>Name</th><th>Price</th></tr>
+		<tr ng-repeat='ol in orderLines'>
+			<td>{{ol.product.s_translation_name}}</td>
+			<td>{{ol.product.product_price}}</td>
+		</tr>
+	</table-->
+</div>

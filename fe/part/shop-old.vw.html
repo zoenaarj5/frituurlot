@@ -1,0 +1,30 @@
+<!--div class='page-title'>Shop Content</div-->
+<div>
+	<div id='shop-search-box'>
+		<!--input type='text' ng-model='searchCrit' placeholder='{{tranz.findProduct}}'><button title='{{tranz.resetSearch}}' ng-click='resetSearchCrit()'><img src="img/empty-search.png"></button-->
+		<input type='text' ng-model='searchCrit' placeholder='{{tranz.findProduct}}'><button title='{{tranz.resetSearch}}' ng-click='resetSearchCrit()'><img src="img/reset-bis.png"></button>
+	</div>
+	<div id='shop-top'>
+		<button ng-click='toCard()' title='{{tranz.backToCard}}'><img src="img/rew.png"></button>
+		<button ng-click='resetCart(1)' title='{{tranz.emptyCart}}'><img src="img/delete-ter.png"></button>
+		<!--button ng-click='viewCart()' title='{{tranz.viewCart}}'><img src="img/eye-icon.png"></button-->
+		<button ng-click='viewCart()' title='{{tranz.viewCart}}'><img src="img/fwd-bis.png"></button>
+		<!--button ng-click='sendCart()' title='{{tranz.sendCart}}'><img src="img/fwd.png"></button-->
+	</div>
+	<div><i>{{tranz.totalPrice}} = € </i><b>{{totalPrice}}</b></div>
+	<div id='product-list'>
+		<div class='product-box' ng-repeat='ol in orderLines | filter:searchCrit'>	
+			<div class='product-top'><img src="img/snack.png"><b class='prod-name-box' ng-click='toggleDescriptions()'>{{ol.product.s_translation_name}}</b>
+			</div>
+			<div class='prod-descr-box'>{{ol.product.s_translation_description}}</div>
+			<div class='prod-number-box'><i>{{tranz.addedAmount}}: <br></i><b>{{ol.cartQuantity}}</b><span class='prod-price-box'> x (<span class='price-span'>€&nbsp;{{ol.product.product_price}}</span> - €&nbsp;{{ol.redux}})</span> = <span class='prod-line-total'>€&nbsp;{{ol.totalLinePrice}}</span><br/> +<input type='number' min='1' max='30' placeholder='0' ng-model='ol.nextQuantity'/>
+			</div>
+			<div>{{tranz.reduction}}={{ol.cartQuantity}} x <span class='price-span'>€ {{ol.redux}}</span>=<b>€&nbsp;{{ol.fullRedux}}</b></div>
+			<button class='undo-button' ng-click='undoAddToCart(ol)'><img src="img/undo-icon.png"></button>
+			<button class='add-button' ng-click='addToCart(ol)'><img src="img/add-icon.png"></button>
+			<button class='reset-button' ng-click='resetCartQuantity(ol)'><img src="img/remove-icon.png"></button>
+			<button class='subtract-button' ng-click='subtractFromCart(ol)'><img src="img/subtract-icon.png"></button>
+			<!--div><i>{{tranz.total}}=</i><b>{{ol.totalLinePrice}}</b></div-->
+		</div>
+	</div>
+</div>

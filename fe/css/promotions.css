@@ -1,0 +1,18 @@
+#wrapper>h2{
+	color:#FC7;
+	text-align: center;
+}
+#promotion-box{
+	height:90%;
+	width:100%;
+}#promotion-box table{
+	border-collapse: collapse;
+	margin-left:10%;
+	text-align: center;
+	width:80%;
+}#promotion-box table td,#promotion-box table th{
+	border:solid 1px orange;
+	font-size: 1.1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}

@@ -1,0 +1,25 @@
+#login-box{
+	text-align: center;
+}
+#login-box input,#login-box select,#login-box button{
+	font-size:1.5em;
+	height:2.5em;
+	text-align: center;
+}
+#login-box h2{
+	color:#FE8;
+	text-align: center;
+}
+#login-box fieldset{
+	margin-left: auto;
+	margin-right:auto;
+	text-align: center;
+	width: 90%;
+}
+#login-box fieldset>input, #login-box fieldset select,#login-box fieldset>button{
+	background-color: #0F0F0F;
+	margin:auto;
+}
+#login-box fieldset>legend{
+	text-transform: uppercase;
+}

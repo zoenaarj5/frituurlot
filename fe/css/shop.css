@@ -1,0 +1,117 @@
+.price-span{
+	color:lightblue;
+}#product-super-list{
+	border-radius: 0px 10px 0px 10px;
+	display: inline-block;
+	float: left;
+	height: 35em;
+	overflow:scroll;
+	width: 50%;
+	}#product-super-list::-webkit-scrollbar{
+		height:0;
+		width:0;
+	}.product-list{
+	width:100%;
+	height:auto;
+}.product-list>h3{
+	background-color: lightblue;
+
+	background: -webkit-linear-gradient(lightblue,#FE8); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(lightblue,#FE8); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(lightblue,#FE8); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(lightblue,#FE8); /* Standard syntax */
+
+	color:black;
+	cursor: pointer;
+/*	font-family: 'Monotype Corsiva';*/
+	margin-bottom: 0;
+	margin-top:1px;
+	text-align: center;
+/*}.product-list::-webkit-scrollbar{
+	width:50px;
+	height:0px;*/
+}.product-list>h3:hover{
+	background-color:#AAF;
+}.product-list >table{
+	border-collapse: collapse;
+	font-size:1em;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	width:98%;
+/*}.product-list:not(:first-child) >table{
+	display: none;*/
+}.product-list table button{
+	border-style: none;
+	color:white;
+	height:2em;
+	margin-top:0.5em;
+	width:2.5em;
+}.product-list table caption{
+	text-transform: uppercase;
+}.product-list table th{
+	font-weight:normal;
+}.product-list table th:nth-child(2n){
+	background-color:black;
+	color:#DC9;
+}.product-list table th:nth-child(2n+1){
+	background-color:#1F1F1F;
+	color:#FEA;
+}.product-list table tr:nth-child(2n+1) td:nth-child(2n){
+	background-color: black;
+	color: #FC8;
+}.product-list table td{
+/*	font-family: 'Monotype Corsiva',Calibri;*/
+	font-size:1em;
+}.product-list table tr:nth-child(2n+1) td:nth-child(2n+1){
+	background-color:#1F1F1F;
+	color: #FC8;
+}.product-list table tr:nth-child(2n) td:nth-child(2n){
+	background-color: #EB7;
+	color: black;
+}.product-list table tr:nth-child(2n) td:nth-child(2n+1){
+	background-color: #FC8;
+	color: black;
+}.product-list .add-button{
+	background-color: #AC8;
+}.product-list .reset-button{
+	background-color: orange;
+}.product-list table button>img{
+	height:100%;
+	width:100%;
+}#shop-top,#shop-search-box{
+	display: inline;
+	text-align: center;
+	width:100%;
+}#shop-top>button{
+	font-size: 1em;
+	height:2.5em;
+	padding-left:0.5em; 
+	padding-right:0.5em; 
+	text-transform: uppercase;
+	width:auto;
+}#shop-top>button:hover{
+	background-color: rgba(0,0,0,0.5);
+}#shop-top>button>img{
+	height:2.5em;
+	width:2.5em;
+}#shop-search-box{
+	margin-top:1em;
+	height:4em;
+}#shop-search-box>button{
+	float:left;
+	height:3em;
+	width:3.6em;
+}
+#shop-search-box>button>img{
+	height:100%;
+	width:100%;
+}
+#shop-search-box>input[type='text']{
+	border:solid 1px #FE8;
+	float:left;
+	font-size: 1.6em;
+	height:2em;
+	text-align: center;
+	width:60%;
+}

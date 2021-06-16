@@ -1,0 +1,10 @@
+<h2>{{tranz.pageTitle}}</h2>
+<div id='photo-gallery-box row'>
+<!--img src="../ge/img/site/work-in-progress-wip.jpg" style="width:100%;"/-->
+	<div class="photo-gallery-block col-sm-10 col-sm-offset-1" ng-repeat="block in photoBlokz">
+		<h4 class="text-center photo-gallery-block-title" ng-click="moveAccordion(block.id)">{{block.title}}</h4>
+		<div class="photo-gallery-block-cont" id="photo-gallery-block-cont-{{block.id}}">
+			<div class="gallery-block-image col-xs-6 col-sm-3 col-md-2" id="gallery-block-image-{{pic}}" ng-repeat="pic in block.pics" ng-click="focusOnImage(pic)"><img  src="../ge/img/gallery-pics/{{pic}}.JPG" alt="..."></div>
+		</div>
+	</div>
+</div>

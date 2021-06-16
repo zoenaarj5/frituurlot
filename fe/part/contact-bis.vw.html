@@ -1,0 +1,40 @@
+<!--div-->
+	<!--div>
+		<img src="img/sight.jpg">
+	</div-->
+	<!--div><b>Hey where are you my people?</b></div>
+	<div id='contact-data-box'>
+		<div ng-repeat='msg in messages'>
+			<h3>{{msg.title}}</h3>
+			<p>{{msg.content}}</p>
+		</div>
+	</div>
+</div-->
+<!--div class='page-title'>Contact Content</div-->
+<div id='contact-box'>
+	<div id="contact-background-box">
+		<img src="img/home-pics/Meal_Box_Delivery_Service.jpg" alt="...">
+		<img src="img/home-pics/fax-machine-1.jpg" alt="...">
+		<!--img src="img/slider-home/IMG_0098.jpg" alt="...">
+		<img src="img/sight.jpg" alt="..."-->
+		<!--img src="img/slider-home - Copy/IMG_0095.JPG" alt="..."-->
+	</div>
+	<div id='contact-data-box-bis'>
+		<div><h3>{{tranz.call}}</h3><p><a href="tel:+32493327542">0493327542</a> | <a href="tel:+32489044800">0489044800</a></p></div>
+		<div><h3>{{tranz.sendEmail}}</h3><p><a href="mailto:immocelia2019@gmail.com">immocelia2019@gmail.com</a></p></div>
+		<div ng-repeat='msg in messages'>
+			<h3>{{msg.title}}</h3>
+			<p>{{msg.content}}</p>
+		</div>
+		<div id='contact-image-box'>
+			<h3>{{tranz.map}}</h3>
+			<span>
+				<img id="contact-image-preview" src='img/frituur-plan.jpg' onclick='$(this).next().addClass("fullScreenMapImage");'>
+				<img hidden='hidden' src='img/frituur-plan.jpg' onclick='$(this).removeClass("fullScreenMapImage");'>
+			</span>
+		</div>
+	</div>
+	<!--div id='geo-bis'-->
+		<!--img src="img/sight.jpg"-->
+	<!--/div-->
+</div>

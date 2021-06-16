@@ -1,0 +1,4 @@
+AuthName "Vous devez vous identifier comme administrateur pour accéder à cette page."
+AuthType Basic
+AuthUserfile "/home/frituurl/www/ad/.htpasswd"
+Require valid-user

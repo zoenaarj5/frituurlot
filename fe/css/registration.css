@@ -1,0 +1,23 @@
+#signup-box{
+	height:100%;
+	overflow: scroll;
+	padding-bottom: 10%;
+	width:100%;
+}#signup-box::-webkit-scrollbar{
+	height:2px;
+	width:2px;
+}#signup-box>h2{
+	color: #FE8;
+	text-align: center;
+}#signup-box>fieldset{
+	margin-left:auto;
+	margin-right: auto;
+	text-align: center;
+	text-transform: uppercase;
+	width:90%;
+}#signup-box>fieldset legend{
+	margin-left:45%;
+}#signup-box>fieldset select,#signup-box>fieldset input{
+/*	background-color: 0F0F0F;*/
+	background-color: black;
+}

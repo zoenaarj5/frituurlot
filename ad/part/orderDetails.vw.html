@@ -1,0 +1,57 @@
+<h2>{{tranz.orderDetailsTitle}}</h2>
+<div id='orderDetails-top-box'>
+	<table>
+		<tr>
+			<th>{{tranz.orderNr}}</th>
+			<th>{{tranz.orderDate}}</th>
+			<th>{{tranz.orderClient}}</th>
+			<th>{{tranz.orderFirm}}</th>
+		</tr>
+		<tr>
+			<td>{{currentOrder.order_id}}</td>
+			<td>{{currentOrder.fDate}}  {{currentOrder.fTime}}</td>
+			<td>{{currentOrder.client_contact_name}}</td>
+			<td>{{currentOrder.client_firm_name}}</td>
+		</tr>
+	</table>
+	<!--div><b>Order nr:</b> {{currentOrder.order_id}}</div>
+	<div><b>Date:</b>{{currentOrder.fDate}} {{currentOrder.fTime}}</div>
+	<div><b>Client:</b>{{currentOrder.client_contact_first_name}} {{currentOrder.client_contact_name}}</div>
+	<div><b>Firm:</b>{{currentOrder.client_firm_name}}</div-->
+</div>
+<div class='top-bar'>
+	<a href='#/orders'><</a>
+	<span><b>{{currentOrder.isConfirmed}}</b></span>
+	<span><b>{{currentOrder.isDelivered}}</b></span>
+	<span><b>{{currentOrder.isPaid}}</b></span>
+	<span><b>{{currentOrder.isCancelled}}</b></span>
+	<input type='checkbox' ng-model='currentOrder.isConfirmed'>{{tranz.confirmOrdered}}
+	<input type='checkbox' ng-model='currentOrder.isDelivered'>{{tranz.confirmDelivered}}
+	<input type='checkbox' ng-model='currentOrder.isPaid'>{{tranz.confirmPaid}}
+	<input type='checkbox' ng-model='currentOrder.isCancelled'>{{tranz.confirmCancelled}}
+	<button ng-click='updateOrder()'>{{tranz.confirm}}</button>
+	<button ng-click='cancelOrder()'>{{tranz.cancel}}</button>
+	<!--button ng-click='confirmOrdered()'>{{orderOrdered}}</button>
+	<button ng-click='confirmDelivered()'>{{orderDelivered}}</button>
+	<button ng-click='confirmPaid()'>{{orderPaid}}</button-->
+</div>
+<h2>{{tranz.orderContent}}</h2>
+<div id='orderDetails-box'>
+	<table>
+		<tr>
+			<th>{{tranz.OLProductName}}</th>
+			<th>{{tranz.OLPrice}}</th>
+			<th>{{tranz.OLReduction}}</th>
+			<th>{{tranz.OLQuantity}}</th>
+			<th>{{tranz.OLTotalPrice}}</th>
+		</tr>
+		<tr ng-repeat='ol in orderLinez'>
+			<td>{{ol.s_translation_name}}</td>
+			<td>{{ol.order_line_price}}</td>
+			<td>{{ol.order_line_reduction}}</td>
+			<td>{{ol.order_line_quantity}}</td>
+			<td>{{ol.total}}</td>
+		</tr>
+		<tr><td colspan='4'>GRAND TOTAL</td><th>{{totalPrice}}</th></tr>
+	</table>
+</div>

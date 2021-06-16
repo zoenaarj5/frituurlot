@@ -1,0 +1,28 @@
+<h2>Orders content</h2>
+<div id='orders-box' ng-init='init(initOrders)'>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>{{tranz.orderDate}}</th>
+			<th>{{tranz.orderClientNames}}</th>
+			<th>{{tranz.orderClientFirm}}</th>
+			<th>{{tranz.orderIsConfirmed}}</th>
+			<th>{{tranz.orderIsDelivered}}</th>
+			<th>{{tranz.orderIsPaid}}</th>
+			<th>{{tranz.orderIsCancelled}}</th>
+		</tr>
+		<tr ng-repeat='order in orderz' ng-click='toOrderDetails(order.order_id)'>
+			<td>{{order.order_id}}</td>
+			<td>{{order.fDate}}, {{order.fTime}}</td>
+			<td>{{order.client_contact_first_name}} {{order.client_contact_name}}</td>
+			<td>{{order.client_firm_name}}</td>
+			<td><img src="../ge/img/yn/active_{{order.order_confirmed}}.png"></td>
+			<td><img src="../ge/img/yn/active_{{order.order_delivered}}.png"></td>
+			<td><img src="../ge/img/yn/active_{{order.order_paid}}.png"></td>
+			<td><img src="../ge/img/yn/active_{{order.order_cancelled}}.png"></td>
+			<!--td><img src="../ge/img/yn/active_{{order.order_completed}}"></td>
+			<td><img src="../ge/img/yn/active_{{order.order_delivered}}"></td>
+			<td><img src="../ge/img/yn/active_{{order.order_paid}}"></td-->
+		</tr>
+	</table>
+</div>

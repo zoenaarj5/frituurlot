@@ -1,0 +1,25 @@
+#myOrders-box{
+}#myOrders-box table{
+	background-color:rgba(0,0,0,0.5);
+	border-collapse: collapse;
+	margin-left:5%;
+	text-align: center;
+	width:90%;
+}#myOrders-box table td,#myOrders-box table th{
+	border:solid 1px orange;
+	padding-bottom: 0.4em;
+	padding-top: 0.4em;
+}#myOrders-box table td>img,#myOrders-box table th>img{
+	height:2em;
+	width:2em;
+}#myOrders-box table tr:hover{
+	background-color:rgba(17,17,17,0.5);
+}#myOrders-button-bar{
+	text-align: center;
+}#myOrders-button-bar>button{
+	text-transform: uppercase;
+	height:auto;
+	width:10em;
+}#myOrders-button-bar>button>img{
+	width:50%;
+}

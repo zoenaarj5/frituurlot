@@ -1,0 +1,9 @@
+#productEdit-box table{
+	border-collapse: collapse;
+	margin-left: 5%;
+	width:90%;
+}#productEdit-box table td:first-child,#productEdit-box table th:first-child{
+	text-align: right;
+}#productEdit-box table td:nth-child(2),#productEdit-box table th:nth-child(2){
+	text-align: left;
+}

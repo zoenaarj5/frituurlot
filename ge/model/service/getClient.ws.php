@@ -1,0 +1,60 @@
+<?php
+	session_start();
+	require_once('../class/KeyGenerator.class.php');
+	require_once('../class/NewManager.class.php');
+	$response=array('data'=>0,'result'=>array());
+	$attributes=array('contactEmail','firmName','firmPhone','contactGSM','firmFax','password');
+	$alt=array('contactEmail','firmName','contactGSM','firmPhone','firmFax');
+	$loginField='';
+	$wrongData=array();
+	foreach($attributes as $attr){
+		if(in_array($attr,$alt)){
+			if(isset($_POST[$attr]) && empty($loginField)) {
+				$loginField=$attr;
+			}
+		}else{
+			if(empty($_POST[$attr])) {
+				$wrongData[]=$attr;
+			}
+		}
+	}
+	$response['login_field']=$loginField;
+	$response['result'][]=array('login-field-exists',!empty($loginField));
+	if($loginField){
+		$response['result'][]=array('input-data-exists',empty($wrongData));
+		if($wrongData){
+			$response['data']++;
+		}else{
+			$dataMeaning=array(
+				'contactEmail'=>'contact_email',
+				'contactGSM'=>'contact_gsm',
+				'firmName'=>'firm_name',
+				'firmPhone'=>'firm_phone',
+				'firmFax'=>'firm_fax'
+			);
+			$result=NewManager::starSelect(
+				'client',
+				array(
+					'fields'=>array(
+						'contact_name','contact_first_name','contact_email','contact_gsm','firm_name','firm_phone','firm_fax'
+					)
+				),
+				array(
+					array('`client`.`'.$dataMeaning[$loginField].'`',$_POST[$loginField]),
+					array('`client`.`password`',hash('sha256',$_POST['password']))
+				),
+				null
+			);
+			$response['result'][]=array('client-exists',!empty($result));
+			if($result){
+				$response['data']=$result[0];
+			}else{
+				$response['data']++;
+			}
+		}
+	}else{
+		$response['data']++;
+	}
+	$response=newManager::toUTF8($response);
+	echo json_encode($response);
+?>

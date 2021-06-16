@@ -1,0 +1,9 @@
+#orders-box table{
+	border-collapse: collapse;
+	width:80%;
+}#orders-box table td,#orders-box table th{
+	border:solid 1px;
+}#orders-box table td>img,#orders-box table th>img{
+	height:1.5em;
+	width:1.5em;
+}

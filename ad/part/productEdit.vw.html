@@ -1,0 +1,21 @@
+<h2>Product Edit Content</h2>
+<div id='productEdit-box' ng-init='fetchEditProduct()'>
+	<div class='top-bar'>
+		<button ng-click='sendProductEdition()'>{{tranz.sendProductEdition}}</button>
+	</div>
+	<table>
+		<tr><th>{{tranz.productId}}</th><td><input type='text' ng-model='editProduct.product_id' disabled='disabled'></td></tr>
+		<tr><th>{{tranz.productName}}</th><td><input type='text' ng-model='editProduct.s_translation_name'></td></tr>
+		<tr><th>{{tranz.productDescription}}</th><td><input type='text' ng-model='editProduct.s_translation_description'></td></tr>
+		<tr>
+			<th>{{tranz.productActive}}</th>
+			<td> 
+				<input type='text' ng-model='editProduct.product_active'>
+				<select ng-model='editProduct.product_active'>
+					<option ng-repeat='o in optz' value='{{o.value}}'>{{o.img}}</option>
+				</select>
+			</td>
+		</tr>
+		<tr><th></th><td><button ng-click='updatePrice()'>{{tranz.updatePrice}}</button></td></tr>
+	</table>
+</div>

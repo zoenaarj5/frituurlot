@@ -1,0 +1,19 @@
+#orderDetails-top-box>table{
+	background-color:rgba(20,50,20,0.6);
+	border-collapse: collapse;
+	font-size: 1.2em;
+}
+#orderDetails-top-box>table td,#orderDetails-top-box>table th{
+	border:solid 1px orange;
+	height: 1.5em;
+	padding-left:1em;
+	padding-right:1em;
+	text-align:center;
+}#orderDetails-box table{
+}#orderDetails-box table td,#orderDetails-box table th{
+	background-color:rgba(20,50,20,0.6);
+	border:solid 1px lightgray;
+	font-size: 1.2em;
+	padding-left:1em;
+	padding-right:1em;
+}

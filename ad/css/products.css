@@ -1,0 +1,9 @@
+#products-box table{
+	border-collapse: collapse;
+	width:80%;
+}#products-box table td,#products-box table th{
+	border:solid 1px;	
+}#products-box table td>img,#products-box table th>img{
+	height:1.5em;
+	width:1.5em;
+}
